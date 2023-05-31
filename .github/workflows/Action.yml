@@ -30,7 +30,6 @@ jobs:
     run: |
       build/check
       cmake --build ${{github.workspace}}/build --target test -- ARGS=--verbose
-
   - name: Do lcov stuff
     run: lcov -c -d build/CMakeFiles/banking.dir/banking/ --include *.cpp --output-file ./coverage/lcov.info
 
